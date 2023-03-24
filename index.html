@@ -101,10 +101,7 @@
         "esri/Graphic",
         "esri/layers/GraphicsLayer",
     ], function (Map, MapView, FeatureLayer, GroupLayer, Search, Expand, LayerList, Locator, esriConfig, PopupTemplate, FieldsContent, FieldInfo, Sketch, SketchViewModel, Graphic, GraphicsLayer) {
-        fetch('https://www.arcgis.com/sharing/rest/oauth2/token?f=json&client_id=V8u37ch13pEPRD5R&client_secret=ea82358420784fc393b4a4b650e3f7fb&grant_type=client_credentials&expiration=15')
-        .then((response) => response.json())
-        .then((data) => {            
-            esriConfig.apiKey = data.access_token;
+        
             var graphicsLayer = new GraphicsLayer({
                 title: 'Graphics'
             });
@@ -346,7 +343,7 @@
 
 
             window.view = view;
-        });
+
     });
     </script>
 </head>
